@@ -46,9 +46,6 @@ function get_movie_by_title() {
             }
         }
     }
-    reset_input_by_title()
-    reset_input_id()
-
 }
 //Function to get movie details by ID
 function get_movie_by_id() {
@@ -67,8 +64,6 @@ function get_movie_by_id() {
             }
         }
     }
-    reset_input_by_title()
-    reset_input_id()
 }
 //Function to display movie details
 function show_movie(data) {
