@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Movie Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/be279ac848.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <style>
+        .lemonada {
+            font-family: 'Lemonada', cursive;
+        }
+
+        .gradient {
+            background: linear-gradient(-225deg, #4db4b5 0%, #3584A7 51%, #3587a8 100%);
+        }
+
+        .background {
+            background-color: #ECEFF1;
+        }
+
+        .text {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="background">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col box gradient">
+                <h2 class="text-center lemonada display-4 text-white p-3">Welcome to Movie Store</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 box p-2">
+                <div class="card">
+                    <h5 class="card-header text-center text font-weight-bold">Search by Title</h5>
+                    <div class="card-body text  ">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label>Title :</label>
+                            <input type="text" id="movie_title" />
+                            <label class="pl-2">Released Year :</label>
+                            <input type="text" id="movie_year" />
+                            <button type="button" class="btn btn-primary pl-3 m-4 font-weight-bold"
+                                onclick="get_movie_by_title()">Search</button>
+                            <button type="button" class="btn btn-light  pl-3 m-1 font-weight-bold"
+                                onclick="reset_input_by_title()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card pt-2">
+                    <h5 class="card-header text-center text font-weight-bold">Search by IMDb ID</h5>
+                    <div class="card-body text  ">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label class="ml-5">ID :</label>
+                            <input type="text" id="imdb_id" />
+                            <button type="button" class="btn btn-primary pl-3 m-4 font-weight-bold"
+                                onclick="get_movie_by_id()"">Search</button>
+                            <button type=" button" class="btn btn-light  pl-3 m-1 font-weight-bold"
+                                onclick="reset_input_id()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 box p-2">
+                <div class="card p-4 text-center pl-2" id="show_movie" style="height: 100%;"> </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
