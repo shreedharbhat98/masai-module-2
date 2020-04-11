@@ -42,6 +42,7 @@ function get_movie_by_title() {
         xhr.send()
         xhr.onload = function () {
             if (xhr.status == 200) {
+                console.log(JSON.parse(xhr.response))
                 show_movie(JSON.parse(xhr.response))
             }
         }
@@ -80,7 +81,7 @@ function show_movie(data) {
     for (keys in data) {
         if ((keys != "Poster") && (keys != "Ratings") && (keys != "Response")) {
             var details = document.createElement("p")
-            details.setAttribute("class", "text ")
+            details.setAttribute("class", "text  font-weight-bold")
 
             details.innerHTML = (keys + " : " + data[keys])
             card.appendChild(details)
