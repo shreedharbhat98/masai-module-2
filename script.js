@@ -38,7 +38,7 @@ function get_movie_by_title() {
         var xhr = new XMLHttpRequest()
         title = title.split(" ")
         var res = title.join("+")
-        xhr.open("GET", "http://www.omdbapi.com/?apikey=fcc8d66d&" + "t=" + res)
+        xhr.open("GET", "http://www.omdbapi.com/?apikey=fcc8d66d&" + "t=" + res + "&y=" + year)
         xhr.send()
         xhr.onload = function () {
             if (xhr.status == 200) {
